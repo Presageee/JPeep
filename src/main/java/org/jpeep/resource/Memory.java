@@ -1,35 +1,42 @@
-package org.cmonitor.resource;
+package org.jpeep.resource;
 
 /**
  * Created by LJT on 17-8-10.
  * email: ljt1343@gmail.com
  */
 public class Memory {
-    private float maxHeap;
+    private float maxHeap = 0.0f;
 
-    private float currentHeap;
+    private float currentHeap = 0.0f;
 
-    private float maxNewGeneration;
+    private float maxNewGeneration = 0.0f;
 
-    private float currentNewGeneration;
+    private float currentNewGeneration = 0.0f;
 
-    private float currentSurvivor0;
+    private float currentSurvivor0 = 0.0f;
 
-    private float currentSurvivor1;
+    private float currentSurvivor1 = 0.0f;
 
-    private float currentEden;
+    private float currentEden = 0.0f;
 
-    private float maxOldSpace;
+    private float maxOldSpace = 0.0f;
 
-    private float currentOldSpace;
+    private float currentOldSpace = 0.0f;
 
-    private int youngGCEvents;
+    private int youngGCEvents = 0;
 
-    private float youngGCTime;
+    private float youngGCTime = 0.0f;
 
-    private int fullGCEvents;
+    private int fullGCEvents = 0;
 
-    private float fullGCTime;
+    private float fullGCTime = 0.0f;
+
+    public Memory() {
+    }
+
+    public Memory(float maxHeap) {
+        this.maxHeap = maxHeap;
+    }
 
     public Memory(float maxHeap, float currentHeap, float maxNewGeneration, float currentNewGeneration,
                   float currentSurvivor0, float currentSurvivor1, float currentEden, float maxOldSpace,

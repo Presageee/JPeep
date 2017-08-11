@@ -1,4 +1,6 @@
-package org.cmonitor.processor;
+package org.jpeep.processor;
+
+import org.jpeep.resource.Memory;
 
 import java.util.List;
 
@@ -18,6 +20,28 @@ public class ProcessInfo {
     private List<String> commandParams;
 
     private List<String> opts;
+
+    private Memory memory;
+
+    public ProcessInfo() {
+    }
+
+    public ProcessInfo(String pid, String mainClassName, String fullClassName,
+                       List<String> commandParams, List<String> opts) {
+        this.pid = pid;
+        this.mainClassName = mainClassName;
+        this.fullClassName = fullClassName;
+        this.commandParams = commandParams;
+        this.opts = opts;
+    }
+
+    public Memory getMemory() {
+        return memory;
+    }
+
+    public void setMemory(Memory memory) {
+        this.memory = memory;
+    }
 
     public String getSystemClassPath() {
         return systemClassPath;

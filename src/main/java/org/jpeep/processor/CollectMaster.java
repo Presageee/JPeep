@@ -1,12 +1,10 @@
-package org.cmonitor.processor;
+package org.jpeep.processor;
 
-import org.cmonitor.core.CMonitorContext;
+import org.jpeep.core.JPeepContext;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.management.RuntimeMXBean;
-import java.util.Map;
 
 /**
  * Created by LJT on 17-8-9.
@@ -18,7 +16,7 @@ public class CollectMaster {
 
     private Process master;
 
-    private CMonitorContext context;
+    private JPeepContext context;
 
     private void initProcessInfo() {
 

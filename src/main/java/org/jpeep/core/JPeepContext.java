@@ -1,6 +1,6 @@
-package org.cmonitor.core;
+package org.jpeep.core;
 
-import org.cmonitor.processor.ProcessInfo;
+import org.jpeep.processor.ProcessInfo;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,18 +9,18 @@ import java.util.Map;
  * Created by LJT on 17-8-9.
  * email: ljt1343@gmail.com
  */
-public class CMonitorContext {
+public class JPeepContext {
 
-    private CMonitorContext() {
+    private JPeepContext() {
 
     }
 
-    public static CMonitorContext getInstance() {
+    public static JPeepContext getInstance() {
         return CMonitorContextHelper.context;
     }
 
     private static class CMonitorContextHelper {
-        private static CMonitorContext context = new CMonitorContext();
+        private static JPeepContext context = new JPeepContext();
     }
 
     private Map<String, ProcessInfo> processMap = new HashMap<>();
